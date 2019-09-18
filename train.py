@@ -1,4 +1,4 @@
-from keras.models import Model
+from keras.models import Model                                                             #Загружаем модули
 from keras import backend as K
 from keras.callbacks import ModelCheckpoint
 
@@ -20,17 +20,17 @@ from PIL import Image
 from google.colab import drive
 drive.mount('/content/drive')
 
-def dice_coef(y_true, y_pred):
+def dice_coef(y_true, y_pred):                                                              #Метрика сходства двух изображений
     y_true_f = K.flatten(y_true)
     y_pred_f = K.flatten(y_pred)
     intersection = K.sum(y_true_f * y_pred_f)
     return (2. * intersection + 1.0) / (K.sum(y_true_f) + K.sum(y_pred_f) + 1.0)
 
 
-def dice_coef_loss(y_true, y_pred):
+def dice_coef_loss(y_true, y_pred):                                                         #Функция потерь для минимизации
     return -dice_coef(y_true, y_pred)
 
-def U_net(image_rows, image_cols, img_channels):
+def U_net(image_rows, image_cols, img_channels):                                            #Стандартная Unet модель
 
     inputs = Input((image_rows, image_cols, img_channels))
     conv1 = Conv2D(32, (3, 3), activation='relu', padding='same')(inputs)
