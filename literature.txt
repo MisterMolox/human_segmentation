@@ -1,0 +1,6 @@
+1. Глубокое обучение Николенко 2018
+2. Сегментация изображений при помощи нейронной сети: U-Net http://robocraft.ru/blog/machinelearning/3671.html
+3. https://github.com/jocicmarko/ultrasound-nerve-segmentation
+4. Обзор алгоритмов сегментации https://habr.com/ru/company/intel/blog/266347/
+5. Цифровая обработка изображений Р. Гонсалес, Р. Вудс 2005
+6. https://habr.com/ru/post/128768/
